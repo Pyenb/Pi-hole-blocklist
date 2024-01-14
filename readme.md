@@ -4,15 +4,19 @@ This is a list of adlists I use with my Pi-hole, all compiled into a single file
 
 It may not be perfect for everyone, but it's a good starting point.
 
-The list currently contains around *~2.4* million domains.
+The list currently contains around *~2.4 million* domains.
 
 ## Usage
 
 To use this list, simply add the following URL to your Pi-hole:
 
 ```text
-https://raw.githubusercontent.com/bramantyoa/pihole-adlist/master/adlist.txt
+https://raw.githubusercontent.com/Pyenb/Pi-hole-adlist/main/blocklist.txt
 ```
+
+## Images
+
+![Pi-hole dashboard](images/pic.png)
 
 ## Contributing
 
