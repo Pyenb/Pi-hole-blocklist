@@ -28,21 +28,16 @@ jobs:
         run: |
           OUTPUT=$(python analyze.py)
           echo "::set-output name=script_output::$OUTPUT"
-
-      - name: Test
-        run: |
-          ls -la
           
       - name: Update README with script output
         run: |
           OUTPUT="${{ steps.run-script.outputs.script_output }}"
+          OUTPUT=$(echo $OUTPUT | tr -d '(),' ) # remove brackets and comma
           VALID=$(echo "$OUTPUT" | awk '{print $1}')
           NOT_VALID=$(echo "$OUTPUT" | awk '{print $2}')
-          echo "Valid: $VALID%"
-          echo "Not valid: $NOT_VALID%"
           BADGE_URL="https://img.shields.io/badge/Valid-$VALID%25-green"
-          BADGE_URL+=" https://img.shields.io/badge/Not_Valid-$NOT_VALID%25-red"
-          sed -i '/last-commit/ a \n![]('"$BADGE_URL"')' readme.md
+          BADGE_URL+=" https://img.shields.io/badge/Invalid-$NOT_VALID%25-red"
+          sed -i '/last-commit/,/^$/c\![]('"$BADGE_URL"')' README.md
 
       - name: Commit changes
         if: success()
