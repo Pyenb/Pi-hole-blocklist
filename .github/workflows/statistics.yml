@@ -32,12 +32,12 @@ jobs:
           python analyze.py
 
       - name: Commit changes
-        if: success()
+        id: commit
         run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git commit -am "Update README statistics badges"
-    
+            git diff --quiet && git diff --staged --quiet || (git commit -am "Update README statistics badges" && echo 'Changes were committed') || echo 'No changes to commit'
+  
       - name: Push changes
-        if: success()
+        if: steps.commit.outcome == 'success'
         run: git push origin HEAD:main

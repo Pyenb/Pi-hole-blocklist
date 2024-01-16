@@ -52,7 +52,7 @@ check_domains()
 
 threads = []
 pbar = tqdm(total=invalid_domains.qsize(), desc="Checking invalid domains", unit="domain")
-for i in range(10):
+for i in range(20):
     t = threading.Thread(target=check_invalid_domains, args=(pbar,))
     t.start()
     threads.append(t)
@@ -81,10 +81,8 @@ def replace_readme():
 
     for i, line in enumerate(lines):
         if 'INVALID_BADGE' in line:
-            print('Replacing invalid badge')
             lines[i] = lines_to_insert[1]
         elif 'VALID_BADGE' in line:
-            print('Replacing valid badge')
             lines[i] = lines_to_insert[0]
 
     with open('readme.md', 'w') as f:
