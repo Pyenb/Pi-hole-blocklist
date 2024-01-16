@@ -2,8 +2,8 @@
 
 ![update](https://github.com/Pyenb/Pi-hole-adlist/actions/workflows/generate.yml/badge.svg)
 ![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-adlist)
-![VALID_BADGE](https://img.shields.io/badge/Valid-99.923%25-green)
-![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.077%25-red)
+![VALID_BADGE](https://img.shields.io/badge/Valid-99.976%25-green)
+![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.024%25-red)
 
 This is a list of adlists I use with my Pi-hole, all compiled into a single file. **Updated daily.**
 
