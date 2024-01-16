@@ -42,7 +42,7 @@ jobs:
           echo "Not valid: $NOT_VALID%"
           BADGE_URL="https://img.shields.io/badge/Valid-$VALID%25-green"
           BADGE_URL+=" https://img.shields.io/badge/Not_Valid-$NOT_VALID%25-red"
-          sed -i '/last-commit/ a \n![]('"$BADGE_URL"')' README.md
+          sed -i '/last-commit/ a \n![]('"$BADGE_URL"')' readme.md
 
       - name: Commit changes
         if: success()
