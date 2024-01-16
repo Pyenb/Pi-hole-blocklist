@@ -9,10 +9,7 @@ jobs:
     permissions:
         contents: write
 
-    steps:
-      - name: Print current directory
-        run: pwd
-      
+    steps:   
       - name: Check out code
         uses: actions/checkout@v4
 
@@ -39,7 +36,7 @@ jobs:
           NOT_VALID=$(echo "$OUTPUT" | awk '{print $2}')
           BADGE_URL="https://img.shields.io/badge/Valid-$VALID%25-green"
           BADGE_URL+=" https://img.shields.io/badge/Not_Valid-$NOT_VALID%25-red"
-          sed -i '/last-commit/ a \n![]('"$BADGE_URL"')' README.md
+          sed -i '/last-commit/ a \n![]('"$BADGE_URL"')' /README.md
 
       - name: Commit changes
         if: success()
