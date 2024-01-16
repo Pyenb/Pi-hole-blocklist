@@ -1,8 +1,7 @@
 # Pi-hole adlist
 
 ![update](https://github.com/Pyenb/Pi-hole-adlist/actions/workflows/generate.yml/badge.svg)
-![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-adlist)
-
+![](https://img.shields.io/badge/Valid-99.923%25-green https://img.shields.io/badge/Invalid-0.077%25-red)
 This is a list of adlists I use with my Pi-hole, all compiled into a single file. **Updated daily.**
 
 It may not be perfect for everyone, but it's a good starting point.
