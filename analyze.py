@@ -50,17 +50,17 @@ def check_invalid_domains(pbar):
 
 check_domains()
 
-threads = []
-pbar = tqdm(total=invalid_domains.qsize(), desc="Checking invalid domains", unit="domain")
-for i in range(5):
-    t = threading.Thread(target=check_invalid_domains, args=(pbar,))
-    t.start()
-    threads.append(t)
+#threads = []
+#pbar = tqdm(total=invalid_domains.qsize(), desc="Checking invalid domains", unit="domain")
+#for i in range(10):
+#    t = threading.Thread(target=check_invalid_domains, args=(pbar,))
+#    t.start()
+#    threads.append(t)
 
-for t in threads:
-    t.join()
+#for t in threads:
+#    t.join()
 
-pbar.close()
+#pbar.close()
 
 def convert_percentage():
     global valid, not_valid
