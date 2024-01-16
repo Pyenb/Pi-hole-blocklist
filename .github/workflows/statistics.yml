@@ -1,10 +1,13 @@
-name: Update README
+name: Update statistics
 
 on:
-    workflow_dispatch:
+  workflow_run:
+    workflows: ["Update blocklist"]
+    types:
+      - completed
 
 jobs:
-  update-readme:
+  update-statistics:
     runs-on: ubuntu-latest
     permissions:
         contents: write
@@ -13,7 +16,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
           python-version: '3.10'
@@ -33,7 +36,7 @@ jobs:
         run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git commit -am "Update README statistcs badges"
+            git commit -am "Update README statistics badges"
     
       - name: Push changes
         if: success()
