@@ -10,6 +10,9 @@ jobs:
         contents: write
 
     steps:
+      - name: Print current directory
+        run: pwd
+      
       - name: Check out code
         uses: actions/checkout@v4
 
