@@ -1,12 +1,17 @@
 # Pi-hole adlist
 
 ![update](https://github.com/Pyenb/Pi-hole-adlist/actions/workflows/generate.yml/badge.svg)
-![](https://img.shields.io/badge/Valid-99.923%25-green https://img.shields.io/badge/Invalid-0.077%25-red)
+![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-adlist)
+![VALID_BADGE](https://img.shields.io/badge/Valid-99.923%25-green)
+![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.077%25-red)
+
 This is a list of adlists I use with my Pi-hole, all compiled into a single file. **Updated daily.**
 
 It may not be perfect for everyone, but it's a good starting point.
 
-The list currently contains around *~2.4 million* domains.
+The list currently contains around *2.4 million* domains.
+
+The blocklist generator already cleans up a lot of the data. Still, after each update, the list is checked for domain validity and the results are displayed in the badges above.
 
 ## Usage
 
