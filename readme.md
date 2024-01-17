@@ -7,9 +7,9 @@
 ![VALID_BADGE](https://img.shields.io/badge/Valid-99.976%25-green)
 ![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.024%25-red)
 
-This is a list of adlists I use with my Pi-hole, all compiled into a single file. **Updated daily.**
+This is the blocklist I use with my Pi-hole. It's compiled out of the individual lists I use, but in a single file. **Updated daily.**
 
-It may not be perfect for everyone, but it's a good starting point.
+It may not be perfect for everyone, but it's a good starting point. It mostly contains ads, telemetry and other questionable websites.
 
 The list currently contains around *2.4 million* domains.
 
