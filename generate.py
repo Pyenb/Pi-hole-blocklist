@@ -4,8 +4,8 @@ from tqdm import tqdm
 adlist = json.loads(open('adlist.json', 'r').read())
 
 domains = []
-filterList = ['0.0.0.0 ', '|', '^', '\n', '(', ')', '\\', '127.0.0.1']
-startFilter = ('#', '.', '!', ':')
+filterList = ['0.0.0.0', '|', '^', '\n', '(', ')', '\\', '127.0.0.1']
+startFilter = ('#', '.', '!', ':', '	', ' ', '255.255.255.255')
 
 for id, ad in enumerate(tqdm(adlist, desc="Downloading adlists", unit="domain")):
     address = ad['address']
@@ -18,6 +18,10 @@ for id, ad in enumerate(tqdm(adlist, desc="Downloading adlists", unit="domain"))
                     continue
                 for filter in filterList:
                     i = i.replace(filter, '')
+                for reFilter in startFilter:
+                    if i.startswith(reFilter):
+                        i = i.replace(reFilter, '')
+                i = i.split('#', 1)[0].strip()        
                 domains.append(i)
     except Exception as e:
         print(f"Error: {e}")
