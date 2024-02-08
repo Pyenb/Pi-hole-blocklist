@@ -63,18 +63,22 @@ for t in threads:
 pbar.close()
 
 def convert_percentage():
-    global valid, not_valid
+    global valid, not_valid, total
     total = valid + not_valid
     valid = round((valid / total) * 100, 3)
     not_valid = round((not_valid / total) * 100, 3)
     
     return valid, not_valid
+    
 
 def replace_readme():
-    valid, not_valid = convert_percentage()
-    badge_valid_url = f"https://img.shields.io/badge/Valid-{valid}%25-green"
-    badge_invalid_url = f"https://img.shields.io/badge/Invalid-{not_valid}%25-red"
-    lines_to_insert = [f'![VALID_BADGE]({badge_valid_url})\n', f'![INVALID_BADGE]({badge_invalid_url})\n']
+    validP, not_validP = convert_percentage()
+    badge_valid_url = f"https://img.shields.io/badge/Valid-{validP}%25-green"
+    badge_invalid_url = f"https://img.shields.io/badge/Invalid-{not_validP}%25-red"
+    lines_to_insert = [
+        f'![VALID_BADGE]({badge_valid_url})\n',
+        f'![INVALID_BADGE]({badge_invalid_url})\n'
+    ]
 
     with open('readme.md', 'r') as f:
         lines = f.readlines()
@@ -84,6 +88,8 @@ def replace_readme():
             lines[i] = lines_to_insert[1]
         elif 'VALID_BADGE' in line:
             lines[i] = lines_to_insert[0]
+        elif 'The list currently contains around' in line:
+            lines[i] = f"The list currently contains around *{round(total/1000000, 1)} million* unique domains.\n"
 
     with open('readme.md', 'w') as f:
         f.writelines(lines)
