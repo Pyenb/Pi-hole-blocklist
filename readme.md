@@ -1,8 +1,8 @@
-# Pi-hole adlist
+# Pi-hole blocklist
 
-![update](https://github.com/Pyenb/Pi-hole-adlist/actions/workflows/generate.yml/badge.svg)
-![statistics](https://github.com/Pyenb/Pi-hole-adlist/actions/workflows/statistics.yml/badge.svg)
-![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-adlist)
+![update](https://github.com/Pyenb/Pi-hole-blocklist/actions/workflows/generate.yml/badge.svg)
+![statistics](https://github.com/Pyenb/Pi-hole-blocklist/actions/workflows/statistics.yml/badge.svg)
+![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-blocklist)
 
 ![VALID_BADGE](https://img.shields.io/badge/Valid-99.975%25-green)
 ![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.025%25-red)
