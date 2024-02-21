@@ -20,7 +20,7 @@ The blocklist generator already cleans up a lot of the data. Still, after each u
 To use this list, simply add the following URL to your Pi-hole:
 
 ```text
-https://raw.githubusercontent.com/Pyenb/Pi-hole-adlist/main/blocklist.txt
+https://raw.githubusercontent.com/Pyenb/Pi-hole-blocklist/main/blocklist.txt
 ```
 
 ## Images
