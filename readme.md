@@ -4,14 +4,14 @@
 ![statistics](https://github.com/Pyenb/Pi-hole-blocklist/actions/workflows/statistics.yml/badge.svg)
 ![last commit](https://img.shields.io/github/last-commit/Pyenb/Pi-hole-blocklist)
 
-![VALID_BADGE](https://img.shields.io/badge/Valid-99.971%25-green)
-![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.029%25-red)
+![VALID_BADGE](https://img.shields.io/badge/Valid-99.97%25-green)
+![INVALID_BADGE](https://img.shields.io/badge/Invalid-0.03%25-red)
 
 This is the blocklist I use with my Pi-hole. It's compiled out of the individual lists I use, but in a single file. **Updated daily.**
 
 It may not be perfect for everyone, but it's a good starting point. It mostly contains ads, telemetry and other questionable websites.
 
-The list currently contains around *2.5 million* unique domains.
+The list currently contains around *2.4 million* unique domains.
 
 The blocklist generator already cleans up a lot of the data. Still, after each update, the list is checked for domain validity and the results are displayed in the badges above.
 
