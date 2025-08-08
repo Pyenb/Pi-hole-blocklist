@@ -11,7 +11,7 @@ This is the blocklist I use with my Pi-hole. It's compiled out of the individual
 
 It may not be perfect for everyone, but it's a good starting point. It mostly contains ads, telemetry and other questionable websites.
 
-The list currently contains around *2.8 million* unique domains.
+The list currently contains around *2.9 million* unique domains.
 
 The blocklist generator already cleans up a lot of the data. Still, after each update, the list is checked for domain validity and the results are displayed in the badges above.
 
